@@ -1,13 +1,13 @@
 <?php
-$to = "mhkjayakumar@gmail.com,akeshav53@gmail.com";
+$to = "mhkjayakumar@gmail.com";
 $subject = "My subject";
-$txt = "Hello world! life";
+$txt = "Hello lifeaid  world!";
 $headers = "From: webmaster@example.com" . "\r\n" .
 "CC: somebodyelse@example.com";
 
 $rtp=mail($to,$subject,$txt,$headers);
 if($rtp==true){
-    echo 'hiii done';
+    echo 'hiii';
 }
 else{
     echo 'byeee';
