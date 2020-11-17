@@ -7,7 +7,7 @@ $headers = "From: webmaster@example.com" . "\r\n" .
 
 $rtp=mail($to,$subject,$txt,$headers);
 if($rtp==true){
-    echo 'hiii';
+    echo 'hiii done';
 }
 else{
     echo 'byeee';
