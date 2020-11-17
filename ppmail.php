@@ -52,7 +52,7 @@
     $headers .= 'From: Protrainy <no_reply@protrainy.com>' . "\r\n";
    
     ​
-   $rtp= mail("$emaily","$subject",$msg,$headers);
+   $rtp= mail("jayakumar2001mhk@gmail.com","$subject",$msg,$headers);
 
 
 
