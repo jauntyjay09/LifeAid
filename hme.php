@@ -1,12 +1,13 @@
 <?php 
-
+if(!empty($_GET['st'])){
     $val=$_GET['st']; 
     $covidurl='https://'.'api.covid19india.org/'.'data.json';
     $covidjson=file_get_contents($covidurl);
     $covidarray=json_decode($covidjson,true);
     $ac=$covidarray['statewise'][0]['active'];
-    
-
+    $rc=$covidarray['statewise'][0]['recovered'];
+    $dc=$covidarray['statewise'][0]['deaths'];
+}
 
 
 ?>
@@ -61,7 +62,7 @@
                 <div class="card-body">
                    <h5 class="card-title text-center">Recovered Cases</h5>
                    <p class="card-text text-center">
-                       74555651
+                    <?php echo $rc; ?>
                    </p>
                    
                  </div>
@@ -70,7 +71,7 @@
                 <div class="card-body">
                    <h5 class="card-title text-center">Deaths</h5>
                    <p class="card-text text-center">
-                       74555651
+                    <?php echo $dc; ?>
                    </p>
                    
                  </div>
