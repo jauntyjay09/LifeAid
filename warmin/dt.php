@@ -1,10 +1,13 @@
 <?php 
-if(!empty($_GET['st'])){
-    $val=$_GET['st'];
-    $covidurl='https://'.'api.rootnet.in/'.'covid19-in/contacts'.urlencode($_GET['st']);
-    $covidjson=file_get_contents($covidurl);
-    $covidarray=json_decode($covidjson,true);
-   // $st=$covidarray['data']['contacts']['regional'][$val]['loc'];
+require('creddb.php');
+
+if(!empty($_GET['state'])&& !empty($_GET['bg'])){
+    $val=mysqli_real_escape_string($conn, $_GET['state']);
+    $bval=mysqli_real_escape_string($conn, $_GET['bg']);
+
+    $select="select * from  usersdonor where state=$val AND bloodgp=$bval";
+    
+    $query=mysqli_query($conn,$select);
     
 }
 
@@ -31,88 +34,157 @@ if(!empty($_GET['st'])){
         <div class="row text-center col-md-8 mx-auto ma ">
           <div class="card col-md-12 im ma">
             <div class="card-body">
-                <h5 class="card-title" style="text-align: center;">Govt. Helpline No.</h5>
+                <h5 class="card-title" style="text-align: center;">Enter state and blood gp.</h5>
 
-                <form action="">
-                <div class="form-row">
+                <form action="" method="GET"> 
+                    <div class="form-row">
                     <div class="col-md-5 mb-3">
-                      <label class="ab" for="st">Enter Your State Name:</label>
-                          <br>
-                         <input class="form-control" list="states" name="st" id="st" required>
-                             <datalist id="states">
-                                <option value="Andhra Pradesh">
-                                   <option value="Arunachal Pradesh">
-                                   <option value="Assam">
-                                   <option value="Bihar">
-                                   <option value="Chhattisgarh">
-                                   <option value="Goa">
-                                   <option value="Gujarat">
-                                   <option value="Haryana">
-                                   <option value="Himachal Pradesh">
-                                   <option value="Jharkhand">
-                                   <option value="Karnataka">
-                                   <option value="Kerala">
-                                   <option value="Madhya Pradesh">
-                                   <option value="Maharashtra">
-                                   <option value="Manipur">
-                                   <option value="Meghalaya">
-                                   <option value="Mizoram">
-                                   <option value="Nagaland">
-                                   <option value="Odisha">
-                                   <option value="Punjab">
-                                   <option value="Rajasthan">
-                                   <option value="Sikkim">
-                                   <option value="Tamil Nadu">
-                                   <option value="Telengana">
-                                   <option value="Tripura">
-                                   <option value="Uttarakhand">
-                                   <option value="Uttar Pradesh">
-                                   <option value="West Bengal">
-                                   <option value="Andaman and Nicobar Islands">
-                                   <option value="Chandigarh">
-                                   <option value="Dadra and Nagar Haveli">
-                                   <option value="Daman & Diu">
-                                   <option value="Delhi">
-                                   <option value="Jammu and Kashmir">
-                                   <option value="Ladakh">
-                                   <option value="Lakshadweep">
-                                   <option value="Puducherry">
-                             </datalist>
+                    
+                     
+                    
+                     <label class="ab" for="st">Enter State Name:</label>
+                        <br>
+                        <input class="form-control" list="state" name="state" id="st" required>
+                        <datalist id="state">
+                         <option value="Andaman and Nicobar Islands">
+    <option value="Andhra Pradesh">
+    <option value="Arunachal Pradesh">
+    <option value="Assam">
+    <option value="Bihar">
+    <option value="Chandigarh">
+    <option value="Chhattisgarh">
+    <option value="Delhi">
+    <option value="Dadra and Nagar Haveli and Daman and Diu">
+    <option value="Goa">
+    <option value="Gujarat">
+    <option value="Himachal Pradesh">
+    <option value="Haryana">
+    <option value="Jharkhand">
+    <option value="Jammu and Kashmir">
+    <option value="Karnataka">
+    <option value="Kerala">
+    <option value="Ladakh">
+    <option value="Lakshadweep">
+    <option value="Maharashtra">
+    <option value="Meghalaya">
+    <option value="Manipur">
+    <option value="Madhya Pradesh">
+    <option value="Mizoram">
+    <option value="Nagaland">
+    <option value="Odisha">
+    <option value="Punjab">
+    <option value="Puducherry">
+    <option value="Rajasthan">
+    <option value="Sikkim">
+    <option value="Telangana">
+    <option value="Tamil Nadu">
+    <option value="Tripura">
+    <option value="Uttar Pradesh">
+    <option value="Uttarakhand">
+    <option value="West Bengal">
+                         
+                   </datalist>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">Blood g.p</label>
+                        <input type="text" name="bg" list="blood" class="form-control" id="validationCustom014"  required>
+                        <datalist id="blood">
+                          <option value="A+">
+                          <option value="A-">
+     <option value="B+">
+      <option value="B-">
+     <option value="AB+">
+     <option value="AB-">
+     <option value="O+">
+     <option value="O-">
+    </datalist>
+                      </div>
                     </div>
                     
-                  </div>
-                  <button class="btn btn-primary" type="submit">Submit</button>
-                </form>
-                <br>
-                <br>
-                <h5 class="card-title">
                     
-                    <?php 
-                      if(!empty($covidarray)){
-                      foreach($covidarray['data']['contacts']['regional'] as $sdc){
-                          if($val==$sdc['loc']){
-                               
-                              echo 'Contact : <br> <a href="tel:'.$sdc['number'].'" style="color: #FFB533">'. $sdc['number'].'</a>';
-                          }
-                         // echo ' option value="'.$sdc['loc'].'"><br>';
+                    
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                <br>
+                <br>
+                <div class="card mx-auto bg-success " >
+                    <div class="card-header mx-auto">
+                      Records
+                    </div>
+                    <div class="card" >
+                        <table class="table">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">S.no</th>
+                                <th scope="col">UID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">email</th>
+                                <th scope="col">mobile</th>
+                                <th scope="col">state</th>
+                                <th scope="col">city</th>
+                                <th scope="col">area</th>
+                                <th scope="col">pin</th>
+                                <th scope="col">blood</th>
+                                <th scope="col">recovered on</th>
+                                <th scope="col">reg time</th>
+                                
+                              </tr>
+                            </thead>
+                            <tbody>
+                                <?php 
+                     $t=1;
+                     while($roe=mysqli_fetch_assoc($query)){
+                         
+                     ?>
+                      <tr>
+                        <td><?php echo $t; ?></td> 
+                        <td><?php echo $roe['ip']; ?></td>
+                        <td><?php echo $roe['fname']; ?></td>
+                        <td><?php echo $roe['email']; ?></td>
+                        <td><?php echo $roe['cono']; ?></td>
+                        <td><?php echo $roe['state']; ?></td>
+                        <td><?php echo $roe['city']; ?></td>
+                        <td><?php echo $roe['region']; ?></td>
+                        <td><?php echo $roe['pincode']; ?></td>
+                        <td><?php echo $roe['bloodgp']; ?></td>
+                        <td><?php echo $roe['date']; ?></td>
+                        <td><?php echo $roe['reg_date']; ?></td>
+                        
+                      </tr>
+                      
+                      <?php $t=$t+1; } ?>
+
+  
+                            </tbody>
+                          </table>
                           
-                      }
-                      }?>
-                </h5>
+                          
+                    </div>
+                   
+                  </div> 
+        
 
                 </div>
                 </div>
                 </div>
                 </div>
 
-                <div class="container-fluid ">
+       
+       
+       
+       
+       
+       
+       
+       
+               <!-- <div class="container-fluid ">
                     <div class="row text-center col-md-10 mx-auto ma">
                       
                       <div class="col-md-4 mx-auto im ma">
                         <img src="assets/med2.jpg">
                       </div>
                       </div>
-                      </div>
+                      </div>-->
     
       
 
