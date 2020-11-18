@@ -14,6 +14,7 @@ if (isset($_POST['name']) && isset($_POST['cono'])){
     $area = mysqli_real_escape_string($conn, $_POST['area']);
     $pin = mysqli_real_escape_string($conn, $_POST['pin']);
     $nam= substr("$name",0,3);
+    $nam=strtoupper("$nam");
     $phon= substr("$cono",2,6); 
     $ron=rand(10,1000);
     $refn=$nam.$ron.$phon; 
