@@ -57,7 +57,7 @@ if (isset($_POST['name']) && isset($_POST['cono'])){
       
         <div class="container-fluid">
       <div class="row pad">
-        <div class=" col-md-6 col-sm-4 col-xs-4 text-justify mx-auto alert alert-success" role="alert">
+        <div class=" col-md-6 col-sm-4 col-xs-4 text-left mx-auto alert alert-success" role="alert">
           You can donate plasma if:<br>
           <ol>
             <li>You were tested positive for COVID-19</li>
@@ -230,7 +230,7 @@ if (isset($_POST['name']) && isset($_POST['cono'])){
                 <div class="form-group">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
+                    <label class="form-check-label" for="invalidCheck" style="color:blue;">
                       <a data-toggle="modal" data-target="#exampleModal"  role="button"> Agree to terms and conditions</a>
                     </label>
                     <div class="invalid-feedback">
