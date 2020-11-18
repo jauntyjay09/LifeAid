@@ -33,11 +33,11 @@
                 Welcome to LifeAid <br> Help Our Nation to flatten the curve
             </h3>
           </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ma" >
+          <!--<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ma" >
             <h3 class="display-6"> 
                 #Atmanirbhar Bharat <img style="max-width: 2em;" src="assets/flag.png">
             </h3>
-          </div>
+          </div>-->
           <div class="col-md-4 mx-auto im ma">
             <img src="assets/grap.svg">
           </div>
