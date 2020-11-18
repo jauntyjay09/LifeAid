@@ -1,5 +1,5 @@
 <?php 
-if(!empty($_GET['st'])){
+
     $val=$_GET['st']; 
     $covidurl='https://'.'api.covid19india.org/'.'data.json';
     $covidjson=file_get_contents($covidurl);
@@ -7,7 +7,7 @@ if(!empty($_GET['st'])){
     $ac=$covidarray['statewise'][0]['active'];
     $rc=$covidarray['statewise'][0]['recovered'];
     $dc=$covidarray['statewise'][0]['deaths'];
-}
+
 
 
 ?>
