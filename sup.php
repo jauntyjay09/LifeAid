@@ -109,7 +109,7 @@ if(!empty($_GET['st'])){
                     <div class="row text-center col-md-10 mx-auto ma">
                       
                       <div class="col-md-4 mx-auto im ma">
-                        <img src="assets/grap.svg">
+                        <img src="assets/med2.jpg">
                       </div>
                       </div>
                       </div>
