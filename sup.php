@@ -36,7 +36,7 @@ if(!empty($_GET['st'])){
                 <form action="">
                 <div class="form-row">
                     <div class="col-md-5 mb-3">
-                      <label class="ab" for="st">Enter State Name:</label>
+                      <label class="ab" for="st">Enter Your State Name:</label>
                           <br>
                          <input class="form-control" list="states" name="st" id="st" required>
                              <datalist id="states">
@@ -92,7 +92,7 @@ if(!empty($_GET['st'])){
                       foreach($covidarray['data']['contacts']['regional'] as $sdc){
                           if($val==$sdc['loc']){
                                
-                              echo 'Connect To: <a href="tel:'.$sdc['number'].'" style="color: #FFB533">'. $sdc['number'].'</a>';
+                              echo 'Contact : <br> <a href="tel:'.$sdc['number'].'" style="color: #FFB533">'. $sdc['number'].'</a>';
                           }
                          // echo ' option value="'.$sdc['loc'].'"><br>';
                           
