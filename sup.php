@@ -31,7 +31,7 @@ if(!empty($_GET['st'])){
         <div class="row text-center col-md-8 mx-auto ma ">
           <div class="card col-md-12 im ma">
             <div class="card-body">
-                <h5 class="card-title" style="text-align: center;">Helpline No.</h5>
+                <h5 class="card-title" style="text-align: center;">Govt. Helpline No.</h5>
 
                 <form action="">
                 <div class="form-row">
