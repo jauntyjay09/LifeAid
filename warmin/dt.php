@@ -1,5 +1,5 @@
 <?php 
-require('creddb.php');
+require('../creddb.php');
 
 if(!empty($_GET['state'])&& !empty($_GET['bg'])){
     $val=mysqli_real_escape_string($conn, $_GET['state']);
