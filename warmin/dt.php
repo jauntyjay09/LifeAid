@@ -5,7 +5,7 @@ if(!empty($_GET['state'])&& !empty($_GET['bg'])){
     $val=mysqli_real_escape_string($conn, $_GET['state']);
     $bval=mysqli_real_escape_string($conn, $_GET['bg']);
 
-    $select="select * from  usersdonor where state=".$val." AND bloodgp=".$bval;
+    $select="select * from  usersdonor where state=".$val." AND bloodgp=".$bval."";
     
     $query=mysqli_query($conn,$select);
     
