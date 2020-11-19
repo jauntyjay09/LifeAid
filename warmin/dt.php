@@ -8,6 +8,8 @@ if(!empty($_GET['state'])&& !empty($_GET['bg'])){
     $select="select * from  usersdonor where state='".$val."' AND bloodgp='".$bval."'";
     
     $query=mysqli_query($conn,$select);
+    if ($query==false){
+        $msg="no data";
     
 }
 
@@ -110,6 +112,7 @@ if(!empty($_GET['state'])&& !empty($_GET['bg'])){
                 <div class="card mx-auto bg-success " >
                     <div class="card-header mx-auto">
                       Records
+                        <?php echo $msg; ?>
                     </div>
                     <div class="card" >
                         <table class="table">
