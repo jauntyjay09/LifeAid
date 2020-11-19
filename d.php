@@ -158,7 +158,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                   </div>
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
-                        <label for="validationCustom04">State</label>
+                        <label for="validationCustom04">State/Union Territory</label>
                         <input class="form-control" list="state" name="state" id="st" required>
                     <datalist id="state">
                      <option value="Andaman and Nicobar Islands">
@@ -207,7 +207,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                     <div class="form-row">
 
                       <div class="col-md-6 mb-3">
-                        <label for="validationCustom03">City</label>
+                        <label for="validationCustom03">City/District</label>
                         <input type="text" name="city" class="form-control" id="validationCustom03" required>
                         <div class="invalid-feedback">
                           Please provide a valid City.
@@ -342,7 +342,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                 <br>
                 <br>
                 <h5 class="card-title">
-                    <b>Share LifeAid Save Life!</b> <br>Your Unique ID : 885566526531
+                    <b>Share LifeAid Save Life!</b> <br>Your Unique ID : <?php echo $refn; ?>
                     
                 </h5>
 
