@@ -243,7 +243,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                     </div>
                   </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <button class="btn btn-primary" type="submit">Register</button>
 
 
 
