@@ -20,16 +20,13 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
     $phon= substr("$cono",2,6); 
     $ron=rand(10,1000);
     $refn=$nam.$ron.$phon; 
-   $_SESSION['sef']=$refn;
+  
      //ip 	email 	fname 	cono 	bloodgp 	age 	date 	state 	city 	region 	pincode 	reg_date 
         $sql = "INSERT INTO `usersdonor` (ip,email,fname,cono,bloodgp,age,date,state,city,region,pincode ) VALUES 
           ('". mysqli_escape_string($conn,$refn) ."', '". mysqli_escape_string($conn,$email) ."', '". mysqli_escape_string($conn,$name) ."', '". mysqli_escape_string($conn,$cono) ."', '". mysqli_escape_string($conn,$bg) ."', '". mysqli_escape_string($conn,$age) ."', '". mysqli_escape_string($conn,$date) ."', '". mysqli_escape_string($conn,$state) ."', '". mysqli_escape_string($conn,$city) ."', '". mysqli_escape_string($conn,$area) ."', '". mysqli_escape_string($conn,$pin) ."')";
          $result = mysqli_query($conn,$sql);
          
-    if($result){
-        header('Location: ty.php');
-    exit;
-    }
+    
        
         
 }
@@ -58,7 +55,9 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
 <body style="background-color: rgb(125, 243, 243);">
     <div id="head"></div>
 
-    
+    <?php 
+   if(!isset($refn)){
+      ?>
    
       
         <div class="container-fluid">
@@ -282,9 +281,42 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
     </div>
 </div>
  
+   <?php }
+   else {
+      ?> <div class="container-fluid ">
+        <div class="row text-center col-md-8 mx-auto ma ">
+          <div class=" col-md-8 im mx-auto ma">
+            <div class="card-body">
+                <h5 class="card-title" style="text-align: center;"><b>Thanks For Registering With Us</b></h5><br>
+                <h5 class="display-5 text-left">You have taken a step ahead of others by contributing your part this could help
+                    our nation to tackle this global pandmic.</h5>
+               <br>
+                    <h5 class="display-5 text-left">Our team is working on its best to find a match and save life.</h5>
+                <br>
+                <br>
+                <h5 class="card-title">
+                    <b>Share LifeAid Save Life!</b> <br>Your Unique ID : <?php echo $refn; ?>
+                    
+                </h5>
+
+                </div>
+                </div>
+                </div>
+                </div>
+
+                <div class="container-fluid ">
+                    <div class="row text-center col-md-12 mx-auto ma">
+                      
+                      <div class="col-md-6 mx-auto im ma">
+                       <h5 class="display-6">If you have any Queries kindly acknowledge us at<br> <a href="mailto:social.lifeaid@gmail.com"
+                        >social.lifeaid@gmail.com</a
+                      > </h5>
+                      </div>
+                      </div>
+                      </div>
    
    
-    
+    <?php } ?>
      
 
 
