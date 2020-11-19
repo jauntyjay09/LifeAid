@@ -1,4 +1,40 @@
+<?php 
+session_start();
+require('creddb.php');
 
+if (isset($_POST['name'])  && isset($_POST['cono'])){
+   
+    
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $email= mysqli_real_escape_string($conn, $_POST['email']);
+    $cono = mysqli_real_escape_string($conn, $_POST['cono']);
+    $bg = mysqli_real_escape_string($conn, $_POST['bg']);
+    $age = mysqli_real_escape_string($conn, $_POST['age']);
+    $date = mysqli_real_escape_string($conn, $_POST['date']);
+    $state = mysqli_real_escape_string($conn, $_POST['state']);
+    $city = mysqli_real_escape_string($conn, $_POST['city']);
+    $area = mysqli_real_escape_string($conn, $_POST['area']);
+    $pin = mysqli_real_escape_string($conn, $_POST['pin']);
+    $nam= substr("$name",0,3);
+    $nam=strtoupper("$nam");
+    $phon= substr("$cono",2,6); 
+    $ron=rand(10,1000);
+    $refn=$nam.$ron.$phon; 
+   $_SESSION['sef']=$refn;
+     //ip 	email 	fname 	cono 	bloodgp 	age 	date 	state 	city 	region 	pincode 	reg_date 
+        $sql = "INSERT INTO `usersdonor` (ip,email,fname,cono,bloodgp,age,date,state,city,region,pincode ) VALUES 
+          ('". mysqli_escape_string($conn,$refn) ."', '". mysqli_escape_string($conn,$email) ."', '". mysqli_escape_string($conn,$name) ."', '". mysqli_escape_string($conn,$cono) ."', '". mysqli_escape_string($conn,$bg) ."', '". mysqli_escape_string($conn,$age) ."', '". mysqli_escape_string($conn,$date) ."', '". mysqli_escape_string($conn,$state) ."', '". mysqli_escape_string($conn,$city) ."', '". mysqli_escape_string($conn,$area) ."', '". mysqli_escape_string($conn,$pin) ."')";
+         $result = mysqli_query($conn,$sql);
+         
+    if($result){
+        header('Location: ty.php');
+    exit;
+    }
+       
+        
+}
+
+?>
 
 
 
