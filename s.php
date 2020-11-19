@@ -49,7 +49,7 @@ if (isset($_POST['name']) && isset($_POST['cono'])){
    ?>
    
    
-<body style="background-color: rgb(125, 243, 243);">
+<body>
     <div id="head"></div>
 
    
@@ -72,7 +72,7 @@ if (isset($_POST['name']) && isset($_POST['cono'])){
      
 <div class="container-fluid ">
     <div class="row pad">
-        <div class=" card col-md-6 mx-auto pad">
+        <div class=" col-md-6 mx-auto pad">
             <h5 class="card-title text-center">Request Plasma</h5>
             <h6 class="card-subtitle mb-2 text-center text-muted">One Step closer to be a warrior!</h6>
             <form action=" " method="POST" class="needs-validation" novalidate>
