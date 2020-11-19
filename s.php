@@ -313,7 +313,7 @@ if (isset($_POST['name']) && isset($_POST['cono'])){
                 <br>
                 <br>
                 <h5 class="card-title">
-                    <b>Share LifeAid Save Life!</b> <br>Your Unique ID : 885566526531
+                    <b>Share LifeAid Save Life!</b> <br>Your Unique ID : <?php echo $refn; ?>
                     
                 </h5>
 
