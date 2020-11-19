@@ -9,7 +9,7 @@ if(!empty($_GET['state'])&& !empty($_GET['bg'])){
     
     $query=mysqli_query($conn,$select);
     
-
+}
 
 ?>
 
