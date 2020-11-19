@@ -222,7 +222,7 @@ if (isset($_POST['name']) && isset($_POST['cono'])){
                     </div>
                   </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Submit form</button>
+                <button class="btn btn-primary" type="submit">Register</button>
               </form>
 
               <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
