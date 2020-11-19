@@ -15,5 +15,5 @@ RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 
 
-RewriteRule ^donate$ /d.php
-RewriteRule ^request$ /s.php
+RewriteRule ^donate/$ /d.php
+RewriteRule ^request/$ /s.php
