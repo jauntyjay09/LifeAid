@@ -111,7 +111,7 @@ if(!empty($_GET['state'])&& !empty($_GET['bg'])){
                       Records
                         
                     </div>
-                    <div class="card" >
+                    <div class="card table-responsive" >
                         <table class="table">
                             <thead class="thead-dark">
                               <tr>
