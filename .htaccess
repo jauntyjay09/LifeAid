@@ -2,3 +2,20 @@
 # HTID:15838748: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
 php_value display_errors 1
 # DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:15838748:
+Options -Indexes
+RewriteEngine on
+#removing a trailing slash to all URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+
+RewriteRule ^donate$ /dphp
+RewriteRule ^request$ /s.php
+RewriteRule ^support$ /sup.php
