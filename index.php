@@ -49,7 +49,7 @@
 
     <div class="container-fluid">
         <div class="row col-md-10 mx-auto  ">
-            <div class=" col-md-3 mx-auto bg-success card ma">
+            <div class=" col-md-3 mx-auto alert-primary card ma">
                <div class="card-body">
                   <h5 class="card-title text-center">Active Cases</h5>
                   <p class="card-text text-center">
@@ -58,7 +58,7 @@
                   
                 </div>
               </div>
-              <div class=" col-md-3 mx-auto bg-warning card ma">
+              <div class=" col-md-3 mx-auto alert-primary card ma">
                 <div class="card-body">
                    <h5 class="card-title text-center">Recovered Cases</h5>
                    <p class="card-text text-center">
@@ -67,7 +67,7 @@
                    
                  </div>
                </div>
-               <div class=" col-md-3 mx-auto bg-danger card ma">
+               <div class=" col-md-3 mx-auto alert-danger card ma">
                 <div class="card-body">
                    <h5 class="card-title text-center">Deaths</h5>
                    <p class="card-text text-center">
