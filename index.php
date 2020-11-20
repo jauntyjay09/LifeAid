@@ -58,7 +58,7 @@
                   
                 </div>
               </div>
-              <div class=" col-md-3 mx-auto alert-primary card ma">
+              <div class=" col-md-3 mx-auto alert-success card ma">
                 <div class="card-body">
                    <h5 class="card-title text-center">Recovered Cases</h5>
                    <p class="card-text text-center">
