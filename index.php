@@ -8,9 +8,13 @@
     $rc=$covidarray['statewise'][0]['recovered'];
     $dc=$covidarray['statewise'][0]['deaths'];
     $ttc=$ac+$rc+$dc;
-    $aac=$ac/$ttc*100; 
+
+    $aac=$ac/$ttc*100;
+    $aac=round($aac,2);
     $rrc=$rc/$ttc*100; 
+    $rrc=round($rrc,2);
     $ddc=$dc/$ttc*100; 
+    $ddc=round($ddc,2);
 
 
 ?>
