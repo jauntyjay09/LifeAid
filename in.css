@@ -6,8 +6,19 @@
     margin-top: 2em;
 }
 .bu{
-   
+    padding: 2em;
     background-color: chartreuse;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-property:background-color ;
+    
+}
+a{
+   color: inherit;
+}
+.bu:hover{
+    background-color: rgb(128, 128, 240);
+
 }
 
 .ko {
