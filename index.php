@@ -133,14 +133,15 @@
       <div class="container-fluid">
         <div class="row col-md-4 mx-auto">
           <div class="card col-md-5 ma bu text-center">
-            Request Plasma
+            <a href="d.php">Donate Plasma</a>
             
           </div>
           <div class="col-md-2">
 
           </div>
           <div class="card col-md-5 ma bu text-center ">
-            Donate Plasma
+            <a href="s.php">Request Plasma</a>
+            
           </div>
         </div>
       </div>
