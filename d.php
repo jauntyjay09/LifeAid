@@ -224,6 +224,9 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                     </div>
                   </div>
                  
+                  
+                </div>
+                <div class="form-row">
                   <div class="col-md-3 mb-3">
                     <label for="validationCustom05">Donor Pincode</label>
                     <input type="text" name="pin" class="form-control" id="validationCustom05" required>
