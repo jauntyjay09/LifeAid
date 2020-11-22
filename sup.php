@@ -35,7 +35,7 @@ if(!empty($_GET['st'])){
 
                 <form action="">
                 <div class="form-row">
-                    <div class="col-md-5 mb-3">
+                    <div class="col-md-5 mx-auto mb-3">
                       <label class="ab" for="st">Enter Your State Name:</label>
                           <br>
                          <input class="form-control" list="states" name="st" id="st" required>
