@@ -105,6 +105,16 @@ if(!empty($_GET['st'])){
                 </div>
                 </div>
 
+    <div class="container-fluid ">
+                    <div class="row text-center col-md-12 mx-auto ma">
+                      
+                      <div class="col-md-6 mx-auto im ma">
+                       <h5 class="display-6">If you have any Queries kindly acknowledge us at<br> <a href="mailto:social.lifeaid@gmail.com"
+                        >social.lifeaid@gmail.com</a
+                      > </h5>
+                      </div>
+                      </div>
+                      </div>
                 <div class="container-fluid ">
                     <div class="row text-center col-md-10 mx-auto ma">
                       
