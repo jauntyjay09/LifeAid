@@ -132,21 +132,22 @@
 
       <div class="container-fluid">
         <div class="row col-md-4 mx-auto">
-             <a href="d.php">
-          <div class="card col-md-5 ma bu text-center">
-            Donate Plasma
             
+          <div class="card col-md-5 ma bu text-center">
+            <a href="d.php">
+                 Donate Plasma
+            </a>
           </div>
-               </a>
+               
           <div class="col-md-2">
 
           </div>
-              <a href="s.php">
+             
           <div class="card col-md-5 ma bu text-center ">
-           Request Plasma
-            
+            <a href="s.php">Request Plasma
+            </a>
           </div>
-                   </a>
+                   
         </div>
       </div>
     <div class="jumbotron jumbotron-fluid col-md-10 col-sm-10 mx-auto ko ma">
