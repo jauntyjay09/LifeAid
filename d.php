@@ -93,7 +93,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                 <div class="form-row">
                   <div class="col-md-6 mb-3">
                     <label for="validationCustom01">Donor Name</label>
-                    <input type="text" name="name" class="form-control" id="validationCustom01"  required>
+                    <input type="text" name="name" class="form-control" id="validationCustom01" maxlength=64 pattern="[a-zA-Z ]+"  required>
                     <div class="valid-feedback">
                       Looks good!
                     </div>
@@ -103,7 +103,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                 <div class="form-row">
                     <div class="col-md-6 mb-3">
                       <label for="validationCustom012">Donor Mobile No.</label>
-                      <input type="text" name="cono" class="form-control" id="validationCustom012"  required>
+                      <input type="text" name="cono" class="form-control" id="validationCustom012" maxlength=14 pattern="[-,+,0-9]+"  required>
                       <div class="valid-feedback">
                         Looks good!
                       </div>
@@ -112,7 +112,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
                       <label for="validationCustom012">Email Id</label>
-                      <input type="text" name="email" class="form-control" id="validationCustom012"  required>
+                      <input type="email" name="email" class="form-control" maxlength=64 id="validationCustom012"  required>
                       <div class="valid-feedback">
                         Looks good!
                       </div>
@@ -121,7 +121,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
                       <label for="validationCustom014">Donor Blood Group</label>
-                      <input type="text" name="bg" list="blood" class="form-control" id="validationCustom014"  required>
+                      <input type="text" name="bg" list="blood" class="form-control"  maxlength=15 pattern="[-,+,a-zA-Z ]+" id="validationCustom014"  required>
                       <datalist id="blood">
                         <option value="A+">
                         <option value="A-">
@@ -140,7 +140,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
                       <label for="validationCustom015">Donor Age</label>
-                      <input type="text" name="age" class="form-control" id="validationCustom015"  required>
+                      <input type="text" name="age" class="form-control" id="validationCustom015"   maxlength=3  pattern="[0-9]+" required>
                       <div class="valid-feedback">
                         Looks good!
                       </div>
@@ -159,7 +159,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                   <div class="form-row">
                     <div class="col-md-6 mb-3">
                         <label for="validationCustom04">State/Union Territory</label>
-                        <input class="form-control" list="state" name="state" id="st" required>
+                        <input class="form-control" list="state" name="state" id="st" maxlength=64 pattern="[a-zA-Z ]+" required>
                     <datalist id="state">
                      <option value="Andaman and Nicobar Islands">
 <option value="Andhra Pradesh">
@@ -208,7 +208,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
 
                       <div class="col-md-6 mb-3">
                         <label for="validationCustom03">City/District</label>
-                        <input type="text" name="city" class="form-control" id="validationCustom03" required>
+                        <input type="text" name="city" class="form-control" maxlength=120  id="validationCustom03" required>
                         <div class="invalid-feedback">
                           Please provide a valid City.
                         </div>
@@ -218,7 +218,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
 
                   <div class="col-md-6 mb-3">
                     <label for="validationCustom13">Donor Area/Region</label>
-                    <input type="text" name="area" class="form-control" id="validationCusto13" required>
+                    <input type="text" name="area" class="form-control" maxlength=160  id="validationCusto13" required>
                     <div class="invalid-feedback">
                       Please provide a valid Area/Region.
                     </div>
@@ -229,7 +229,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
                 <div class="form-row">
                   <div class="col-md-3 mb-3">
                     <label for="validationCustom05">Donor Pincode</label>
-                    <input type="text" name="pin" class="form-control" id="validationCustom05" required>
+                    <input type="text" name="pin" class="form-control"  maxlength=6 pattern="[0-9]+" id="validationCustom05" required>
                     <div class="invalid-feedback">
                       Please provide a valid Pincode.
                     </div>
