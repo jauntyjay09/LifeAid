@@ -218,7 +218,7 @@ if (isset($_POST['name'])  && isset($_POST['cono'])){
 
                   <div class="col-md-6 mb-3">
                     <label for="validationCustom13">Donor Area/Region</label>
-                    <input type="text" name="area" class="form-control" maxlength=160  id="validationCusto13" required>
+                    <input type="text" name="area" class="form-control" maxlength=120  id="validationCusto13" required>
                     <div class="invalid-feedback">
                       Please provide a valid Area/Region.
                     </div>
